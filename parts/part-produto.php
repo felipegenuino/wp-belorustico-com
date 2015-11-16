@@ -1,7 +1,9 @@
 <div class="row">
 
 <?php if (is_front_page() )  { ?>
-  <h1 class="featured-title"> Featured Products</h1>
+  <div class="small-12 columns">
+      <h1 class="featured-title"> Featured Products</h1>
+    </div>
 <? }   ?>
 
 

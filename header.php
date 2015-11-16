@@ -12,7 +12,7 @@
 	<meta name="keywords" content="Lorem, ipsum, dolor, sit, amet, consectetur, adipisicing, elit">
 
  	<link rel="stylesheet" href="style.css">
-	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" type="image/x-icon">
 
 
 
@@ -26,7 +26,7 @@
 	<div class="brand-main">
 		<a href="<?php bloginfo('home') ?>" class="brand-main__link"><img class="brand-main__link--img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/brand-main.png" alt=""></a>
 	</div> <!-- // brand-main -->
-	
+
 	<?php menuPrincipal(); ?>
-	
+
 </header>
