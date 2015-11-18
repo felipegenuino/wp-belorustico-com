@@ -24,7 +24,23 @@
 
 <header class="main-header">
 	<div class="brand-main">
-		<a href="<?php bloginfo('home') ?>" class="brand-main__link"><img class="brand-main__link--img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/brand-main.png" alt=""></a>
+		
+ 
+ 
+
+<a href="<?php bloginfo('home'); ?>" class="brand-main__link">
+
+ <?php if ( get_field('acf_options_brand') ) { ?>
+ 		<img class="brand-main__link--img have-brand" src="<?php the_field('acf_options_brand', 'option'); ?>" alt="">
+ <?php } else { ?>
+ 	 	<img class="brand-main__link--img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/img/brand-main.png" alt="">
+ <?php } ?>
+
+</a>
+
+
+
+		
 	</div> <!-- // brand-main -->
 
 	<?php menuPrincipal(); ?>

@@ -63,7 +63,12 @@ p.wp-caption-text{
     display: inline-block;
     margin-bottom: 50px;
 }
-.home .main-header{ margin-bottom: 0}
+.home .main-header{ 
+float: left;
+    margin-bottom: 0;
+    width: 100%;
+    display: inline-block;
+}
 
 
 /*MENU PRINCIPAL*/

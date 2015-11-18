@@ -1,11 +1,18 @@
 <?php get_header(); ?>
 
-
-<script src="http://malsup.github.io/jquery.cycle2.js"></script>
-
-<script src="http://malsup.github.io/jquery.cycle2.carousel.js"></script>
+ 
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/libs/cyrcle2/jquery.cycle2.js"></script>
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/assets/libs/cyrcle2/jquery.cycle2.carousel.js"></script>
+ 
 <!-- <script src="http://malsup.github.io/jquery.cycle2.tile.js"></script>
  -->
+
+
+
+
+
+
+
 
 
 	<?php while ( have_posts() ) : the_post(); ?>
@@ -51,7 +58,7 @@
         >
           <?php  $images = get_field('acf_product_gallery');  if( $images ): ?>
 			 <?php foreach( $images as $image ): ?>
-			 <div><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>  width=500 height=500" /></div>
+			 <div><img id="cyrcle-slideshow--image" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" /></div>
         	 <?php endforeach; ?>
  		<?php endif; ?>
     </div>
@@ -72,7 +79,7 @@
         >
         <?php  $images = get_field('acf_product_gallery');  if( $images ): ?>
 			 <?php foreach( $images as $image ): ?>
-			 <div><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>  width=100 height=100" /></div>
+			 <div><img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"    /></div>
         	 <?php endforeach; ?>
  		<?php endif; ?>
 
@@ -112,8 +119,9 @@ $('#cycle-2 .cycle-slide').click(function(){
   <div class="medium-12 large-5 columns single-product-content" >
     <h1 class="product_title"><?php the_title(); ?></h1>
     <h5 class="product_dimension"><?php the_field('acf_product_dimensions') ?> </h5>
-    <div class="product_price"><span>Price: USD $</span> <?php  the_field('acf_product_price') ?></div>
     <div class="product_description"><?php  the_field('acf_product_description') ?></div>
+        <div class="product_price"><span>Price: USD $</span> <?php  the_field('acf_product_price') ?></div>
+
   </div><!-- // end columns -->
 
 
@@ -127,6 +135,12 @@ $('#cycle-2 .cycle-slide').click(function(){
 
    		</article>
 	<?php endwhile;?>
+
+
+
+
+ 
+
 
 
 
@@ -152,3 +166,10 @@ $('#cycle-2 .cycle-slide').click(function(){
             <?php endforeach; ?>
           </ol>
 <?php endif; */ ?>
+
+
+
+
+
+
+ 
