@@ -43,11 +43,10 @@ p.wp-caption-text{
   color:#ccc;
 }
 
-/*HERO HOME*/
-.hero-home{    display: inline-block;
-    width: 100%;
-    margin-bottom: 40px;}
-
+/*HERO */
+.hero-home, 
+.hero-page{    display: inline-block; width: 100%; margin-bottom: 40px;}
+ 
 
 .featured-title{
     border-bottom: 1px solid #eee;
@@ -58,17 +57,14 @@ p.wp-caption-text{
 
 
 /*MAIN HEADER*/
-.main-header{
-	width: 100%;
-    display: inline-block;
-    margin-bottom: 50px;
-}
-.home .main-header{ 
-float: left;
-    margin-bottom: 0;
-    width: 100%;
-    display: inline-block;
-}
+.main-header{  float: left; margin-bottom: 0; width: 100%; display: inline-block; }
+.main-footer{  float: left; margin-bottom: 0; width: 100%; display: inline-block; padding: 40px 0 }
+
+
+
+
+.single-product .main-header{margin-bottom: 60px;}
+
 
 
 /*MENU PRINCIPAL*/
@@ -79,29 +75,123 @@ float: left;
     text-align: center;
     float: right;
 }
+
+
+
 @media only screen and (max-width: 64em) {
   .menu-principal{ width: 100%;     margin: 20px 0;}
 } /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
 
-
+.menu-principal{transition: all 0.5s;}
 .menu-principal > li{display: inline-block;}
-.menu-principal > li > a { padding: 0 10px;
-    color: #000;
-    font-size: 0.9rem;
-    text-transform: uppercase;}
+
+
+
+
+/* Effect Brackets */
+.menu-principal > li a::before,
+.menu-principal > li a::after { display: inline-block; opacity: 0; -webkit-transition: -webkit-transform 0.3s, opacity 0.2s; -moz-transition: -moz-transform 0.3s, opacity 0.2s; transition: transform 0.3s, opacity 0.2s; }
+.menu-principal > li a::before { margin-right: 10px; content: '['; -webkit-transform: translateX(20px); -moz-transform: translateX(20px); transform: translateX(20px); }
+.menu-principal > li a::after { margin-left: 10px; content: ']'; -webkit-transform: translateX(-20px); -moz-transform: translateX(-20px); transform: translateX(-20px); }
+ 
+
+.menu-principal > li a:hover::before,
+.menu-principal > li a:hover::after,
+.menu-principal > li a:focus::before,
+.menu-principal > li a:focus::after { opacity: 1; -webkit-transform: translateX(0px); -moz-transform: translateX(0px); transform: translateX(0px); }
+
+
+ 
+
+
+
+
+.menu-principal   li.current-menu-item > a{ font-weight: 800}
+.menu-principal > li > a { opacity: 0.8;  color: #000; font-size: 0.9rem; text-transform: uppercase; position: relative;}
+.menu-principal > li:hover > a {opacity: 1}
+
+
+.menu-principal > li.menu-item-has-children:hover > .sub-menu{ 
+ z-index: 102;    
+  opacity: 1;
+   -webkit-transform: translateY(40px);
+  -moz-transform: translateY(40px);
+  transform: translateY(40px);
+
+}
+.menu-principal > li.menu-item-has-children:hover > .sub-menu li{ }
 
 .menu-principal > li.menu-item-has-children{position: relative;}
-.menu-principal > li.menu-item-has-children > .sub-menu{display: none; }
-.menu-principal > li.menu-item-has-children:hover > .sub-menu{
-  display: block;
-    position: absolute;
-    z-index: 102;
-    list-style: none;
-    width: 140px;}
-.menu-principal > li.menu-item-has-children:hover > .sub-menu li{text-align: left; }
+.menu-principal > li.menu-item-has-children > .sub-menu{
+ box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.3), 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+
+border-top: 1px solid rgba(0, 0, 0, 0.05);
+position: absolute;
+list-style: none;
+ width: 160px;
+ top: 0px;
+margin: 0;
+background-color: #fff;
+left: -6px;
+
+  -webkit-transform: translateY(-20px);
+  -moz-transform: translateY(-20px);
+  transform: translateY(-20px);
+
+z-index: -1;
+ 
+  opacity: 0;
+  -webkit-transition: -webkit-transform 0.3s, opacity 0.2s;
+  -moz-transition: -moz-transform 0.3s, opacity 0.2s;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+
+
+@media only screen and (min-width: 64.063em) { 
+  .menu-principal > li.menu-item-has-children{ padding-bottom: 40px;}
+  } /* min-width 1025px, large screens */
+
+
+
+.menu-principal > li.menu-item-has-children > .sub-menu::before{
+content: "";
+position: absolute;
+border-bottom: 17px solid rgba(0,0,0,0.05);
+border-left: 17px solid transparent;
+border-right: 17px solid transparent;
+left: 50%;
+top: -16px;
+margin-left: -22px;
+}
+
+.menu-principal > li.menu-item-has-children > .sub-menu::after{
+content: "";
+position: absolute;
+border-bottom: 15px solid #FFFFFF;
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+left: 50%;
+top: -14px;
+margin-left: -20px;
+}
+
+
+.menu-principal > li.menu-item-has-children > .sub-menu li {text-align: left;border-bottom: 1px solid #eee; }
+.menu-principal > li.menu-item-has-children > .sub-menu li a { 
+display: block;
+padding: 5px 15px;
+color: #000;
+font-size: 14px;
+}
+
 
 .menu-principal__item{}
 .menu-principal__item--link{}
+
+
+
+
 
 
 /*BRAND*/

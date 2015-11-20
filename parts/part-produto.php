@@ -1,17 +1,23 @@
 <div class="row">
 
-<?php if (is_front_page() )  { ?>
+<?php if ( is_home() )  { ?>
   <div class="small-12 columns">
       <h1 class="featured-title"> Featured Products</h1>
     </div>
 <? }   ?>
 
 
-        <ul class="medium-block-grid-2 large-block-grid-3 block-grid-list-products ">
+        <ul class="medium-block-grid-2 <?php if ( is_home() ) {  ?> large-block-grid-2  <?php  } else{  ?>  large-block-grid-3  <?php  }  ?> block-grid-list-products ">
+
+
+
+
+
+
 
         <?php
 
-             if (is_front_page() ) {
+             if (is_home() ) {
                   $args = array(
                   'post_type' => 'product',
                   'posts_per_page' => -1,
@@ -40,7 +46,15 @@
                         <a href="<?php the_permalink(); ?>" class="card__product--link-thumb" > <?php the_post_thumbnail( '', array('class' => 'card__product--link-thumb-img') ); ?>  </a>
                     <?php endif; ?>
                     <?php the_title( '<span class="card__product--title" >', '</span>' ); ?>
-                     <span class="card__product--dimension"><?php the_field('acf_product_dimensions') ?> </span>
+
+
+<?php if ( !is_home() )  { ?>
+                       <span class="card__product--dimension"><?php the_field('acf_product_dimensions') ?> </span>
+
+<? } ?>
+
+
+
 
 
                     <?php /* edit_post_link('editar', '<small class="edit-content">', '</small>  ');  */?>

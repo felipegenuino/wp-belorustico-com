@@ -1,5 +1,10 @@
 <?php get_header(); ?>
 
+
+<?php get_template_part( 'parts/part-hero-page' ); ?>
+
+
+
 <div class="row">
 	<div class="small-12 medium-8 medium-offset-2 columns" role="main">
 
@@ -10,9 +15,7 @@
   			<div class="entry-content">
 				<?php the_content(); ?>
 			</div>
-			<footer>
-				 
- 			</footer>
+			 
  		</article>
 	<?php endwhile;?>
 

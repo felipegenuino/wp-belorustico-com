@@ -1,5 +1,11 @@
 <?php get_header(); ?>
 
+
+<?php //para categorias precisa refatorar  ?>
+<?php get_template_part( 'parts/part-hero-page' ); ?>
+
+
+
   <div class="hero-page">
     <div class="row">
         <div class="small-12 colluns">

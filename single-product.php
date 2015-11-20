@@ -44,7 +44,7 @@
 
 <div id="slideshow-1" >
 		<!-- http://www.w3schools.com/charsets/ref_utf_dingbats.asp -->
-         <a href="#" class="cycle-prev">&#10094;  </a>
+         <a href="#" class="cycle-prev"> &#10094;  </a>
          <a href="#" class="cycle-next"> &#10095; </a>
 		<!-- <span class="custom-caption"></span> -->
      <div id="cycle-1" class="cycle-slideshow"
