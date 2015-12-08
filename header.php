@@ -5,14 +5,27 @@
 
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge;chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 	<link rel="canonical" href="<?php bloginfo('url'); ?>" />
-	<meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.">
-	<meta name="keywords" content="Lorem, ipsum, dolor, sit, amet, consectetur, adipisicing, elit">
+	<meta name="description" content="We are a 10 year old company in Brazil who specialize in the production of beautifully handcrafted sustainable furniture made from the finest and most characterful hand selected beams of reclaimed wood.">
+	<meta name="keywords" content="reclaimed, sustainable, specialize, handcrafted,  furniture, Brazil, iron table, bench, buffet, chair, china cabinet, decor, desk, dish cabinet, dresser, nightstand, rack, sideboard, table, wine cellar ">
 
- 	<link rel="stylesheet" href="style.css">
+
 	<link rel="icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.ico" type="image/x-icon">
+
+	<meta property="og:locale" content="pt_br" />
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Belo Rustico | Reclaimed & Sustainable" />
+	<meta property="og:description" content="We are a 10 year old company in Brazil who specialize in the production of beautifully handcrafted sustainable furniture made from the finest and most characterful hand selected beams of reclaimed wood." />
+	<meta property="og:url" content="http://www.belorustico.com" />
+	<meta property="og:site_name" content="Belo Rústico" />
+	<meta property="og:image" content="http://www.belorustico.com/wp-content/themes/belorustico/assets/img/og-image.jpg"/>
+	<meta property="og:image:type" content="image/jpeg">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:height" content="630">
 
 
 
@@ -24,9 +37,9 @@
 
 <header class="main-header">
 	<div class="brand-main">
-		
- 
- 
+
+
+
 
 <a href="<?php bloginfo('home'); ?>" class="brand-main__link">
 
@@ -40,7 +53,7 @@
 
 
 
-		
+
 	</div> <!-- // brand-main -->
 
 	<?php menuPrincipal(); ?>
