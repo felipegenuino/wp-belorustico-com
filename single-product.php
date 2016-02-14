@@ -14,8 +14,8 @@ $(document).ready(function() {
       navigation : false, // Show next and prev buttons
       slideSpeed : 300,
       paginationSpeed : 400,
-      singleItem:true
- 
+      singleItem:true,
+      autoHeight : true,
       // "singleItem:true" is a shortcut for:
       // items : 1, 
       // itemsDesktop : false,
@@ -38,6 +38,7 @@ $(document).ready(function() {
     slideSpeed : 1000,
     navigation: false,
     pagination:false,
+    autoHeight : true,
     afterAction : syncPosition,
     responsiveRefreshRate : 200,
   });
@@ -49,6 +50,7 @@ $(document).ready(function() {
     itemsTablet       : [768,4],
     itemsMobile       : [479,3],
     pagination:false,
+    autoHeight : true,
     responsiveRefreshRate : 100,
     afterInit : function(el){
       el.find(".owl-item").eq(0).addClass("synced");
